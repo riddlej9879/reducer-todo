@@ -11,7 +11,7 @@ const TodoForm = ({ addTask, filterTasks }) => {
     const handleSubmit = event => {
         event.preventDefault();
         // if statement prevents adding empty tasks
-        if(newTask) {
+        if (newTask) {
             addTask(newTask);
         }
         setNewTask('');
@@ -31,7 +31,8 @@ const TodoForm = ({ addTask, filterTasks }) => {
                     name="newTask"
                     placeholder="ADD TASK"
                     value={newTask}
-                    onChange={handleChanges} />
+                    onChange={handleChanges}
+                />
                 <button type="Submit">Add</button>
                 <button type="button" onClick={handleClear}>Clear</button>
             </form>

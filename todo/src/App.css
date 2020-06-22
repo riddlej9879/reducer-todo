@@ -28,3 +28,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.completed {
+  text-decoration: line-through;
+}

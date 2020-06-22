@@ -1,16 +1,17 @@
 import React, { useReducer } from "react";
+
 import TodoForm from "./Components/TodoForm";
 import TodoList from "./Components/TodoList";
 import { itemReducer, initialState } from "./Reducers/useReducer";
+
 import './App.css';
 
 function App() {
   const [state, dispatch] = useReducer(itemReducer, initialState);
-  console.log('initialState', state);
 
   const addTask = newTask => {
     dispatch({
-      type: 'ADD_TODO',
+      type: 'ADD_TASK',
       payload: newTask
     });
   }
@@ -24,7 +25,7 @@ function App() {
 
   const filterTasks = () => {
     dispatch({
-      type: 'FILTER_TODO'
+      type: 'FILTER_TASK'
     })
   }
   return (
